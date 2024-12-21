@@ -1,413 +1,880 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chalés e Camping da Mata</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="" />
-  <meta name="keywords" content="dasdasiqweoqwppdasoowq999978s2d2asd7asda5s5" />
-  <meta name="author" content="Marcos Rodrigues" />
-  <link rel="stylesheet" type="text/css"
-    href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chalés e Camping da Mata</title>
+    <meta name="description" content="Chalé e camping na serra da canastra">
+    <meta name="keywords"
+        content="chales, são roque de minas, serra da canastra, canastra, camping, motorhome, motor home, motorhome serra da canastra, queijo">
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-  <link rel="stylesheet" href="css/fancybox.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
-  <style>
-    .owl-carousel.home-slider .slider-item {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+    <style>
+        * {
+            color: #6A7B66
+        }
+
+        .work-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        #menu-toggle:checked+#menu {
+            display: block;
+        }
+
+        .hover\:grow {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+
+        .hover\:grow:hover {
+            transform: scale(1.02);
+        }
+
+        .texto-header {
+            color: #a49360
+        }
+
+
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+
+
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                width: 100%;
+            }
+        }
+
+        .imagem-header {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("./capa.jpg");
+
+        }
+
+        @media screen and (min-width: 500px) {
+            .imagem-header {
+                background-position: center;
+                background-image: url("./capa2.jpg");
+            }
+
+            .texto-header {
+                color: #fff
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            section {
+                width: 70%
+            }
+
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3,
+        #carousel-4:checked~.control-4,
+        #carousel-5:checked~.control-5,
+        #carousel-6:checked~.control-6,
+        #carousel-7:checked~.control-7,
+        #carousel-8:checked~.control-8,
+        #carousel-9:checked~.control-9 {
+            display: block;
+        }
+
+
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+
+        #carousel-4:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-5:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-6:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+
+
+        #carousel-7:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-8:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-9:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
+
 </head>
 
-<body>
-
-  <header class="site-header js-site-header">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-
-        <div class="col-6 col-lg-4 site-logo" data-aos="fade">
-          <a href="index.html">
-          <img style="height: 70px; width: 70px;" src="/images/logo.svg" alt="">
-            
-            Chalés da Mata</a>
-        </div>
-        <div class="col-6 col-lg-8">
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal ">
 
 
-          <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- END menu-toggle -->
+    <a href="https://api.whatsapp.com/send?phone=5537988310241" target="_blank">
 
-          <div class="site-navbar js-site-navbar">
-            <nav role="navigation">
-              <div class="container">
-                <div class="row full-height align-items-center">
-                  <div class="col-md-6 mx-auto">
-                    <ul class="list-unstyled menu">
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a href="politica.html">Política de Reserva </a></li>
-                      <li><a href="https://www.instagram.com/chale_damatacanastra/" target="_blank"><span
-                            class="fa fa-instagram"></span> Instagram</a></li>
-                      <li><a href="https://api.whatsapp.com/send?phone=5537988310241" target="_blank"><span
-                            class="fa fa-whatsapp"></span> Whatsapp</a></li>
-
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- END head -->
-
-  <section class="site-hero overlay" style="background-image: url(images/capa.png)"
-    data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row site-hero-inner justify-content-center align-items-center">
-        <div class="col-md-10 text-center" data-aos="fade-up">
-          <span class="custom-caption text-uppercase text-white d-blo ck  mb-3">Seja bem-vindo ao</span>
-          <h1 class="heading">Chalés e Camping da Mata</h1>
-          <!-- 
-            <div>
-                <img style="scale: 0.3;" src="/images/logo.png" alt="">
-              </div>
-            -->
-        </div>
-      </div>
-    </div>
-
-    <a class="mouse smoothscroll" href="#next">
-      <div class="mouse-icon">
-        <span class="mouse-wheel"></span>
-      </div>
+        <img class="fixed w-10 bottom-2 right-5 z-50" src="./whatsapp.svg" alt="">
     </a>
-  </section>
-  <!-- END section -->
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 py-1">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
 
-  <section class="section bg-light pb-0" id="checkIn">
+            <label for="menu-toggle" class="cursor-pointer md:hidden block">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
 
-  </section>
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4" href="#sobreNos">Sobre
+                                nós</a></li>
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4"
+                                href="#camping">Camping</a></li>
 
-  <section class="section">
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4" href="#chale">Chalé</a>
+                        </li>
 
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-7">
-          <h2 class="heading" data-aos="fade-up">Chalés &amp; Camping</h2>
-          <divdata-aos="fade-up" data-aos-delay="100">
-            <p>Estamos a 1,5km de São Roque de Minas - MG, a capital da Canastra. Em um lugar tranquilo e aconchegante,
-              perfeito para descansar e entrar em contato com a natureza. E ao mesmo tempo, do lado da cidade. </p>
-            <p>Simplicidade, tranquilidade e hospitalidade é nossa marca registrada. Sempre preocupados em oferecer a
-              melhor experiência para nossos hospedes. Temos quatro companheiros super
-              brincalhões, que irão fazer companhia para vocês. </p>
-            <p> O nosso café da manhã é preparado com muito carinho e cuidado, com frutas colhidas no nosso pomar. O
-              leite é ordenhado toda dia pela manhã, da famosa Cinderela, que já é um atrativo por si só. Bolos e pães
-              sempre fresquinhos e produzidos pela nossa família. (Não incluso na diária do camping). </p>
-            <p>No final do dia, podem descansar em nossas redes, preparar o proprio jantar em nossa cozinha coletiva ou
-              até mesmo acender uma fogueira para aquecer as noites frescas que fazem por aqui.</p>
-            <p> </p>
-            <p> Wifi / Estacionamento aberto </p>
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4" href="#mel">Mel</a>
+                        </li>
+
+
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4" href="#quemSomos">Quem
+                                somos</a></li>
+
+
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4"
+                                href="#politica">Políticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="order-1 md:order-2">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold  text-xl " href="#">
+                    <img src="https://damatachales.com.br/images/logo.svg" class="w-10 h-10 md:w-10 md:h-10 mr-3">
+                </a>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-    <div style="display:  flex; flex-direction: column; align-items: center;">
+    </nav>
+    <div style="height:70svh">
+        <div class="relative block h-full w-full flex pt-6 md:pt-0 md:items-center t imagem-header">
 
-      <div class="col-md-9 col-lg-6" data-aos="fade-up">
-        <a href="#" class="room">
-          <figure class="img-wrap " style="display: flex; justify-content: center;">
-            <img src="images/26.jpeg" style="height: 300px;" alt="" class="img-fluid mb-2">
-            <img src="images/27.jpeg" style="height: 300px;" alt="" class="img-fluid mb-2">
-          </figure>
-          <div class="p-2 text-center " style="color:#6c757d;">
-            <h2>Chalés</h2>
-            <div>
-              <p>Chalés com TV Oi Livre, Frigobar e banheiro privativo</p>
-              <div>
-                <table width="100%" cellspacing="0" cellpadding="4">
-                  <tbody>
-                    <tr valign="top">
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Dias da semana</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Individual</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Duplo/Casal</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Triplo (casal+1)</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Quádruplo (casal+beliche)</strong></span>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Segunda a Quinta</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$200,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$280,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$400,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$500,00</span>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Sexta a Domingo</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$250,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$300,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$420,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$520,00</span>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td width="20%">
-                        <span style="text-align: center;"><strong>Feriados</strong></span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$300,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$350,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$450,00</span>
-                      </td>
-                      <td width="20%">
-                        <span style="text-align: center;">R$550,00</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p>Valores com o café da manhã incluso. Mínimo duas diárias</p>
-              <p><b>Para feriados consultar valores </b></p>
+            <div class="absolute  w-full h-full overflow-hidden flex justify-center items-start sm:items-center">
+                <div
+                    class="flex flex-col w-full justify-center items-center md:w-1/2 items-center md:items-start px-6 tracking-wide ">
+                    <p class="texto-header text-md uppercase text-center w-full ">Seja bem-vindo ao
+                    </p>
+                    <p class="texto-header text-3xl my-2 uppercase text-center w-full">Chalés e Camping da Mata
+                    </p>
+
+                </div>
             </div>
-          </div>
-        </a>
-      </div>
 
-
-
-      <div class="col-md-9 col-lg-6" data-aos="fade-up">
-        <a href="#" class="room">
-          <figure class="img-wrap" style="display: flex; justify-content: center">
-            <img src="images/camping-5.jpeg" style="height: 300px;" alt="" class="img-fluid mb-2">
-            <img src="images/camping-6.jpeg" style="height: 300px;" alt="" class="img-fluid mb-2">
-
-          </figure>
-          <div class="p-2 text-center " style="color:#6c757d;">
-            <h2>Camping</h2>
-            <div>
-              <p>Camping com cozinha coletiva (Geladeira, freezer, Fogão a gás e a lenha) e banheiros com chuveiro
-                elétrico</p>
-              <div>
-                <p class="text-uppercase letter-spacing-1">Pessoa - R$ 60,00 / Dia</p>
-              </div>
-              <p>Traga sua barraca e equipamentos</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-
-    </div>
-    </div>
-  </section>
-
-
-  <section class="section slider-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-7">
-          <h2 class="heading" data-aos="fade-up">Fotos</h2>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 ">
-          <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="slider-item">
-              <a href="/images/0.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/0.jpeg" style="width: 400px;"></a>
+    </div>
+
+
+    <div class="flex flex-col items-center">
+
+        <section class="p-3" id="sobreNos">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center ">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-10"
+                    href="#sobreNos">
+                    Sobre nós
+                </a>
+
+                <p class="mt-8 mb-2">Estamos a 1,5km de São Roque de Minas - MG, a capital da Canastra. Em um lugar
+                    tranquilo e
+                    aconchegante, perfeito para
+                    descansar e entrar em contato com a natureza. Sem deixar o conforto de estar próximo a cidade.
+
+                </p>
+                <p class="my-2">
+                    Simplicidade, tranquilidade e hospitalidade é nossa marca registrada.
+
+                </p>
+                <p class="my-2">
+                    Sempre preocupados em oferecer a melhor experiência para nossos hospedes, assim como recebemos
+                    nossos
+                    amigos em casa.
+
+                </p>
+                <p class="my-2">
+                    Temos quatro companheiros super brincalhões, a Sabrina, o Tobias, a Kika e o Jorge. Eles farão
+                    companhia
+                    pra vocês durante a estadia e deixarão tudo ainda mais leve.
+
+                </p>
+                <p class="my-2">No final do dia, podem descansar em nossas redes, preparar o próprio jantar em nossa
+                    cozinha
+                    coletiva ou
+                    até mesmo acender uma fogueira para aquecer as noites frescas que fazem por aqui.</p>
+
             </div>
 
-            <div class="slider-item">
-              <a href="/images/1.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/1.jpeg" style="width: 400px;"></a>
+        </section>
+
+
+        <section class="p-3" id="camping">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
+                    href="#camping">
+                    CAMPING E APOIO PARA MOTOR HOME
+                </a>
+
+                <p class="mt-8 mb-2">Nossa estrutura de camping é toda gramada. Possui banheiros com chuveiro elétrico,
+                    cozinha coletiva com utensílios
+                    básicos, geladeira, fogão a gás e a lenha e churrasqueira.
+
+                </p>
+                <p class="my-2">
+                    Rede Wi-Fi em toda a área.
+
+                </p>
+                <p class="my-2">
+                    Espaço exclusivo e bem plano, para motor home e trailer com pontos de água, energia elétrica e
+                    descarte
+                    dos resíduos.
+                </p>
+                <p class="my-2">
+                    O ambiente é seguro e confortável (limitamos a quantidade de hóspedes para que todos tenham a melhor
+                    experiência).
+
+                </p>
+                <p class="my-2">Vocês devem trazer barraca e todo o equipamento que será usado durante a experiencia.
+                </p>
+                <p class="my-4 text-xl font-bold">R$60 A DIÁRIA POR PESSOA</p>
+
+
+                <div class="carousel relative container mx-auto" style="max-width:1600px;">
+                    <div class="carousel-inner relative overflow-hidden w-full">
+                        <!--Slide 1-->
+                        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                            hidden="" checked="checked">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/camping.jpg');">
+
+                            </div>
+                        </div>
+
+                        <!--Slide 2-->
+                        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/camping-2.jpg');">
+
+
+                            </div>
+                        </div>
+
+                        <!--Slide 3-->
+                        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                                style="background-image: url('/camping-3.jpg');">
+
+
+
+                            </div>
+                        </div>
+
+                        <!-- Add additional indicators for each slide-->
+                        <ol class="carousel-indicators">
+                            <li class="inline-block mr-3">
+                                <label for="carousel-1"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-2"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-3"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
             </div>
-            <div class="slider-item">
-              <a href="/images/3.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/3.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/4.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/4.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/5.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/5.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/6.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/6.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/7.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/7.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/8.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/8.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/9.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/9.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/10.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/10.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/11.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/11.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/12.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/12.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/13.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/13.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/14.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/14.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/15.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/15.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/16.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/16.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/17.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/17.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/20.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/20.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/21.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/21.jpeg" style="width: 400px;"></a>
+        </section>
+
+        <section class="p-3" id="chale">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
+                    href="#chale">
+                    CHALÉ
+                </a>
+
+                <p class="mt-8 mb-2">Temos 2 exclusivos e aconchegantes chalés.
+                </p>
+                <p class="my-2">
+                    Possuem banheiros privativos, Tv, ventilador
+                    de mesa, frigobar e uma varanda gostosa com rede, onde tomarão o café da manhã que é preparado com
+                    muito
+                    carinho e cuidado, com produtos
+                    da região e
+                    feitos pela Amanda.
+                </p>
+
+                <p class="my-2">
+                    As frutas são colhidas diariamente no nosso pomar. O leite é ordenhado toda dia pela
+                    manhã, da Barrosa que é nossa vaquinha de estimação.
+                </p>
+
+
+
+                <p class="mt-4 mb-2 text-md font-bold">DUPLO</p>
+                <p class="text-sm  font-bold">SEGUNDA-QUINTA R$ 280</p>
+                <p class="text-sm  font-bold">SEXTA-DOMINGO R$ 300</p>
+
+
+                <p class="mt-6 mb-2 text-md font-bold">TRIPLO</p>
+                <p class="text-sm  font-bold">SEGUNDA-QUINTA R$ 400</p>
+                <p class="text-sm  font-bold">SEXTA-DOMINGO R$ 420</p>
+
+                <p class="mt-6 mb-2 text-md font-bold">QUADRUPLO</p>
+                <p class="text-sm  font-bold">SEGUNDA-QUINTA R$ 500</p>
+                <p class="text-sm  font-bold">SEXTA-DOMINGO R$ 520</p>
+
+                <div class="carousel relative container mx-auto" style="max-width:1600px;">
+                    <div class="carousel-inner relative overflow-hidden w-full">
+                        <!--Slide 1-->
+                        <input class="carousel-open" type="radio" id="carousel-4" name="carousel2" aria-hidden="true"
+                            hidden="" checked="checked">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/chale.jpg');">
+
+                            </div>
+                        </div>
+                        <label for="carousel-6"
+                            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-5"
+                            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 2-->
+                        <input class="carousel-open" type="radio" id="carousel-5" name="carousel2" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/chale2.jpg');">
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-4"
+                            class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-6"
+                            class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 3-->
+                        <input class="carousel-open" type="radio" id="carousel-6" name="carousel2" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                                style="background-image: url('/chale3.jpg');">
+
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-5"
+                            class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-4"
+                            class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!-- Add additional indicators for each slide-->
+                        <ol class="carousel-indicators">
+                            <li class="inline-block mr-3">
+                                <label for="carousel-4"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-5"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-6"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+
+
             </div>
 
-            <div class="slider-item">
-              <a href="/images/23.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/23.jpeg" style="width: 400px;"></a>
-            </div>
-            <div class="slider-item">
-              <a href="/images/1.jpeg" data-fancybox="images" data-caption="Caption for this image"><img
-                  src="/images/1.jpeg" style="width: 400px;"></a>
-            </div>
 
-          </div>
-          <!-- END slider -->
+
+        </section>
+        <section class="p-3" id="mel">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10" href="#mel">
+                    MEL
+                </a>
+
+                <p class="mt-8 mb-2">Zezão se dedica com muito amor a criação de abelhas nativas e com ferrão.
+
+                </p>
+                <p class="my-2">
+                    O meliponário fica ao lado da nossa recepção, entre a mata que da o nosso nome e na cozinha
+                    coletiva.
+
+                </p>
+                <p class="my-2">
+                    As com ferrão, ficam em pastos apículas das plantações que seus irmãos tem. Aqui realmente é tudo em
+                    família.
+                </p>
+                <p class="my-2">
+                    Com elas, além de contribuir com a sustentabilidade ambiental, ele extrai o verdadeiro mel da
+                    Canastra.
+                    Onde cuida do
+                    inicio ao fim da produção. Além do extrato de própolis verde, dos alecrins dos campos.
+                </p>
+                <p class="my-2">Tem se aventurado e conseguindo louvor, em produzir também o PRIMEIRO hidromel da
+                    Canastra.
+                </p>
+                <p class="my-2">Logo pela manhã oferece sempre um mel recém extraído para quem está hospedado. E claro,
+                    quem
+                    quiser levar para casa,
+                    temos várias opções que vai de mel de abelha nativa, com favo e até mel cremoso.</p>
+                <div class="carousel relative container mx-auto" style="max-width:1600px;">
+                    <div class="carousel-inner relative overflow-hidden w-full">
+                        <!--Slide 1-->
+                        <input class="carousel-open" type="radio" id="carousel-7" name="carousel4" aria-hidden="true"
+                            hidden="" checked="checked">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/mel.jpg');">
+
+                            </div>
+                        </div>
+                        <label for="carousel-9"
+                            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-8"
+                            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 2-->
+                        <input class="carousel-open" type="radio" id="carousel-8" name="carousel4" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/mel2.jpg');">
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-7"
+                            class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-9"
+                            class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 3-->
+                        <input class="carousel-open" type="radio" id="carousel-9" name="carousel4" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                                style="background-image: url('/mel3.jpg');">
+
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-8"
+                            class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-7"
+                            class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!-- Add additional indicators for each slide-->
+                        <ol class="carousel-indicators">
+                            <li class="inline-block mr-3">
+                                <label for="carousel-7"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-8"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-9"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="p-3" id="quemSomos">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
+                    href="#quemSomos">
+                    QUEM SOMOS
+                </a>
+
+                <p class="mt-8 mb-2">Nascemos através de uma ideia e necessidade da cidade ter boas opções e estrutura
+                    de
+                    camping e chalés mais intimista. Já
+                    que o terreno adquirido pela família é tão bem localizado e em um lugar lindo e tranquilo. Em 2020
+                    demos
+                    inicio ao Chalé
+                    da Mata.
+
+                </p>
+                <p class="my-2">
+                    Zezão, canastreiro dos mais raízes que existe. Com várias profissões, desde serralheiro, marceneiro,
+                    pedreiro, apicultor
+                    e condutor ambiental do Parque Nacional da Serra da Canastra. Vai te contar muita história já
+                    vivida! É
+                    o pai da Amanda
+                    e é quem colocou em prático o sonho de ter um espaço para receber no coração da Canastra. Aqui, ele
+                    fez
+                    todos os
+                    telhados, janelas e portas de ferro. Fez sua casinha do mel, cuida do jardim, do pomar, das abelhas
+                    e
+                    ordenha todas as
+                    manhãs a Barrosa.
+                </p>
+                <p class="my-2">
+                    Amanda, é quem sonhou e tem se dedicado a oferecer a melhor experiencia de hospedagem na região. Ela
+                    cuida desde as
+                    reservas, a recepção, a produção do café da manhã e mora nesse paraíso junto com o Marcos e seus 4
+                    cachorros. Uma coisa
+                    te garanto: vai te receber como se fosse um velho amigo em sua casa.
+                </p>
+                <p class="my-2">
+                    Além deles, tem a Rosarinha, que é a mãe da Amanda e do Bruno e esposa do Zezão. Sempre cuidando das
+                    flores, dos
+                    detalhes e de todos, na retaguarda. O Bruno é o filho mais novo e sempre presta apoio para os
+                    momentos
+                    de aperto.
+                </p>
+                <p class="my-2">Tudo aqui é feito em família com muito carinho.
+                </p>
+                <div class="carousel relative container mx-auto" style="max-width:1600px;">
+                    <div class="carousel-inner relative overflow-hidden w-full">
+                        <!--Slide 1-->
+                        <input class="carousel-open" type="radio" id="carousel-10" name="carousel5" aria-hidden="true"
+                            hidden="" checked="checked">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/quemsomos.jpg');">
+
+                            </div>
+                        </div>
+                        <label for="carousel-12"
+                            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-11"
+                            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 2-->
+                        <input class="carousel-open" type="radio" id="carousel-11" name="carousel5" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                                style="background-image: url('/quemsomos2.jpg');">
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-10"
+                            class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-12"
+                            class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!--Slide 3-->
+                        <input class="carousel-open" type="radio" id="carousel-12" name="carousel5" aria-hidden="true"
+                            hidden="">
+                        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                                style="background-image: url('/quemsomos3.jpg');">
+
+
+
+                            </div>
+                        </div>
+                        <label for="carousel-11"
+                            class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-10"
+                            class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                        <!-- Add additional indicators for each slide-->
+                        <ol class="carousel-indicators">
+                            <li class="inline-block mr-3">
+                                <label for="carousel-10"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-11"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-12"
+                                    class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="p-3" id="politica">
+
+            <div
+                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
+                    href="#politica">
+                    Políticas
+                </a>
+
+                <p class="mt-8 mb-2">
+                    No ato da reserva o cliente declara estar ciente e de acordo com as Políticas de Reservas,
+                    cancelamento
+                    e no-show.
+                </p>
+                <p class="my-2">
+                    Horários Check-in / Check-out (Chalés e Camping)
+                </p>
+
+
+                <p class="my-2">
+                    Entrada: 14h as 21h.
+                </p>
+
+
+                <p class="my-2">
+                    Saída: até 12h.
+
+                </p>
+
+                <p class="my-2">
+                    Confirmação de reservas somente após depósito no valor de 50% do valor total das diárias.
+                </p>
+
+
+
+                <p class="my-2">
+                    Fazer o envio do comprovante de depósito para o número (37) 98831-0241.
+
+                </p>
+                <p class="my-2">
+                    O pagamento dos 50% restantes da hospedagem e eventuais consumos ou danos do local, deverá ser feito
+                    em
+                    cartão de
+                    crédito/débito, transferência bancaria ou dinheiro até no check-out. Não aceitamos cheques.
+                </p>
+                <p class="my-2">
+                    A partir da confirmação do pagamento da reserva e envio do comprovante, a mesma estará confirmada.
+                    Havendo necessidade
+                    de cancelamento ou alteração da data da reserva, o cliente deverá comunicar por escrito (via e-mail
+                    ou
+                    WhatsApp) à
+                    Central de Reservas da Pousada, não sendo aceitos cancelamento ou alteração por telefone. O
+                    cancelamento
+                    ou alteração de
+                    datas estará sujeito à disponibilidade e cobrança de taxas conforme as condições abaixo. O saldo de
+                    pagamento das
+                    diárias será cobrado até no check-out.
+                </p>
+                <p class="my-2">
+                    Até 7 dias após a data do deposito da reserva o cliente tem o direito de cancelar de forma grátis e
+                    com
+                    reembolso total
+                    do valor depositado.
+                </p>
+                <p class="my-2">
+                    Política de Cancelamento para Reservas com Pagamento Antecipado
+                    Em caso de saída antecipada das diárias contratadas, NÃO haverá devolução do valor pago
+                    antecipadamente;
+                </p>
+                <p class="my-2">
+                    Aviso de cancelamento com mais de 30 dias de antecedência da entrada na pousada (check-in), há
+                    estorno
+                    de 100% do valor
+                    pago, ou deixamos 100% do valor pago para ser usado numa outra data dentro do prazo de 12 meses;
+
+                </p>
+                <p class="my-2">
+                    Aviso de cancelamento com mais de 7 dias de antecedência da entrada na Pousada (check-in), há
+                    estorno de
+                    50% do valor
+                    pago, ou deixamos 50% do valor pago para ser usado numa outra data dentro do prazo de 12 meses;
+
+                </p>
+                <p class="my-2">
+                    Aviso de cancelamento com 7 dias ou menos da entrada na Pousada (check-in), NÃO há estorno ou
+                    crédito;
+                    Não há reembolso
+                    e nem remarcação da reserva em caso de desistência pelo clima/previsão do tempo.
+                </p>
+                <p class="my-2">
+                    Aviso de cancelamento com menos de 24 h ou no show** (não comparecimento no dia da chegada), não há
+                    estorno e não tem
+                    direito a crédito; **No show é uma desistência sem cancelamento, isto é, quando o hóspede não
+                    comparece
+                    ao hotel na data
+                    de entrada reservada.
+
+                </p>
+                <p class="my-2">
+                    Não há reembolso e nem remarcação da reserva em caso de desistência pelo clima/previsão do tempo.
+                </p>
+                <p class="my-2">
+                    O hóspede poderá providenciar a substituição por outro, desde que seja nas mesmas condições, datas e
+                    quantidade de
+                    diárias;
+                </p>
+                <p class="my-2">
+                    Nos casos de uso do crédito em nova data, não é permitido uma nova remarcação.
+
+                </p>
+                <p class="my-2">
+                    Como nosso tarifário muda sazonalmente e em feriados, o crédito de 100% ou 50% é em valor e não
+                    necessariamente em
+                    números de diárias;
+                </p>
+                <p class="my-2">
+                    Políticas Internas
+                    Aceitamos pagamento em dinheiro, transferência bancaria e cartões de crédito/débito na pousada.
+                </p>
+                <p class="my-2">
+                    Não aceitamos animais de estimação (pet).
+                </p>
+                <p class="my-2">
+                    Estamos em meio a natureza, insetos e animais podem ser avistados. Respeitamos e priorizamos a vida
+                    deles.
+                </p>
+                <p class="my-2">
+                    NÃO é permitido na Pousada, uso de fogos de artifício, aparelhos de som em volume alto, batucadas,
+                    etc.
+
+                </p>
+                <p class="my-2">
+                    Energia elétrica disponível em nossas tomadas é 110v, internet sem fio (Wi-Fi) e cozinha coletiva
+                    com
+                    utensílios
+                    básicos.
+                </p>
+
+                <p class="my-2">
+                    É proibido fumar dentro dos chalés e banheiros. É permitido fumar nas áreas abertas da pousada.
+                </p>
+
+                <p class="my-2">
+                    É proibido preparar qualquer tipo de refeições dentro dos chalés ou nas respectivas varandas.
+                </p>
+
+                <p class="my-2">
+                    Qualquer dano patrimonial causado pelo hóspede assim como o extravio ou danificação de itens
+                    emprestados
+                    ou pertencentes
+                    às acomodações, será cobrado na conta, valor a ser determinado pela pousada.
+                </p>
+
+                <p class="my-2">
+                    As toalhas (fornecidas nos chalés) são para uso interno. Não é permitido sair com elas para fora das
+                    dependências da
+                    pousada.
+
+                </p>
+
+                <p class="my-2">
+                    Em caso de não comparecimento para o café da manhã, no caso dos chalés (sem aviso prévio no ato da
+                    reserva) não será
+                    descontado o valor do mesmo.
+                </p>
+            </div>
+        </section>
+
+    </div>
+    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+        <div class="container flex px-3 py-8 ">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full lg:w-1/2 pb-2">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold ">Endereço</h3>
+                        <p class="py-1">
+                            Estrada São Roque – Vargem Bonita, 1,5km – Imbira
+                            São Roque de Minas – MG.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex w-full lg:w-1/2 ">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold ">Telefone/Whatsapp:</h3>
+                        <p class="py-1">
+                            (37) 9 8831-0241
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
-  <!-- END section -->
-
-
-
-  <footer class="section footer-section">
-    <div class="container">
-      <div class="col-md-3 mb-5 pr-md-5 contact-info">
-        <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-        <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Endereço:</span>
-          <span>Estrada São Roque – Vargem Bonita, 1,5km – Imbira
-            <br> São Roque de Minas – MG.</span>
-        </p>
-        <p><span class="d-block"><span class="fa fa-whatsapp h5 mr-3 text-primary"></span>Telefone/Whatsapp:</span>
-          <span> (37) 9 8831-0241</span>
-        </p>
-      </div>
-    </div>
-    <div class="row pt-5">
-      <p class="col-md-6 text-left">
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-          class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
-
-      <p class="col-md-6 text-right social">
-        <a href="#"><span class="fa fa-tripadvisor"></span></a>
-        <a href="#"><span class="fa fa-vimeo"></span></a>
-      </p>
-    </div>
-    </div>
-  </footer>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-
-
-  <script src="js/aos.js"></script>
-
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-
-
-
-  <script src="js/main.js"></script>
 </body>
 
 </html>
