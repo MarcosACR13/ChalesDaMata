@@ -56,7 +56,7 @@
 
         @media screen and (max-width: 768px) {
             section {
-                width: 100svw%;
+                width: 100svw
             }
         }
 
@@ -78,7 +78,7 @@
             }
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) {
             section {
                 width: 70svw;
             }
@@ -141,7 +141,7 @@
 
     <a href="https://api.whatsapp.com/send?phone=5537988310241" target="_blank">
 
-        <img class="fixed w-10 bottom-2 right-5 z-50" src="./whatsapp.svg" alt="">
+        <img loading="lazy" class="fixed w-10 bottom-2 right-5 z-50" src="./whatsapp.svg" alt="">
     </a>
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 py-1">
@@ -159,6 +159,9 @@
             <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
                 <nav>
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:hover:underline py-2 px-4"
+                                href="https://api.whatsapp.com/send?phone=5537988310241" target="_blank">Whatsapp</a>
+                        </li>
                         <li><a class="inline-block no-underline hover:hover:underline py-2 px-4" href="#sobreNos">Sobre
                                 nós</a></li>
                         <li><a class="inline-block no-underline hover:hover:underline py-2 px-4"
@@ -183,7 +186,8 @@
 
             <div class="order-1 md:order-2">
                 <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold  text-xl " href="#">
-                    <img src="https://damatachales.com.br/images/logo.svg" class="w-10 h-10 md:w-10 md:h-10 mr-3">
+                    <img loading="lazy" src="https://damatachales.com.br/images/logo.svg"
+                        class="w-10 h-10 md:w-10 md:h-10 mr-3">
                 </a>
 
             </div>
@@ -213,7 +217,7 @@
         <section class="p-3" id="sobreNos">
 
             <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center ">
+                class="w-full  mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center ">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-xl mb-10"
                     href="#sobreNos">
@@ -255,7 +259,7 @@
         <section class="p-3" id="camping">
 
             <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+                class="h-full mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
                     href="#camping">
@@ -345,8 +349,7 @@
 
         <section class="p-3" id="chale">
 
-            <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+            <div class="mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
                     href="#chale">
@@ -459,8 +462,7 @@
         </section>
         <section class="p-3" id="mel">
 
-            <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+            <div class="mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10" href="#mel">
                     MEL
@@ -562,8 +564,7 @@
 
         <section class="p-3" id="quemSomos">
 
-            <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+            <div class="mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
                     href="#quemSomos">
@@ -681,8 +682,7 @@
 
         <section class="p-3" id="politica">
 
-            <div
-                class="container mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
+            <div class="mx-auto border border-1 bg-zinc-100 border-zinc-400 p-2 rounded-lg shadow-xl text-center">
 
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-10"
                     href="#politica">
@@ -849,10 +849,10 @@
         </section>
 
     </div>
-    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-        <div class="container flex px-3 py-8 ">
-            <div class="w-full mx-auto flex flex-wrap">
-                <div class="flex w-full lg:w-1/2 pb-2">
+    <footer class=" mx-auto bg-white py-8 border-t border-gray-400">
+        <div class=" flex px-3 py-8 ">
+            <div class="w-full mx-auto text-center">
+                <div class=" w-full pb-2">
                     <div class="px-3 md:px-0">
                         <h3 class="font-bold ">Endereço</h3>
                         <p class="py-1">
@@ -862,7 +862,7 @@
                     </div>
                 </div>
 
-                <div class="flex w-full lg:w-1/2 ">
+                <div class=" w-full ">
                     <div class="px-3 md:px-0">
                         <h3 class="font-bold ">Telefone/Whatsapp:</h3>
                         <p class="py-1">
