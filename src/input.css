@@ -1,0 +1,127 @@
+/*
+  Estilos do site Chalé e Camping da Mata (Tailwind CSS v4).
+
+  Este é o arquivo-FONTE. O navegador usa o arquivo COMPILADO:
+    assets/css/site.css  ← é ele que precisa ir para o GitHub.
+
+  Sempre que mudar classes no index.html, no main.js ou neste arquivo:
+    npm install      (só na primeira vez)
+    npm run build    (gera o assets/css/site.css minificado)
+
+  Enquanto edita, `npm run dev` recompila a cada alteração salva.
+*/
+
+/* Só lê as classes do site novo (ignora a pasta _legado/ e o node_modules/). */
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../assets/js/main.js";
+
+@theme {
+  --color-mata: #2f3b2a;
+  --color-mata-escuro: #222b1e;
+  --color-musgo: #55644f;
+  --color-terra: #b5532e;
+  --color-terra-escuro: #97431f;
+  --color-mel: #e9a23b;
+  --color-mel-claro: #f6e7c8;
+  --color-cafe: #4a3a2e;
+  --color-papel: #f6f1e7;
+  --color-areia: #ece3d1;
+  --color-whats: #25d366;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  html.menu-aberto {
+    overflow: hidden;
+  }
+  body {
+    @apply bg-papel font-sans text-mata antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-terra;
+  }
+  ::selection {
+    @apply bg-mel/40;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .eyebrow { @apply text-xs font-semibold tracking-[0.18em] uppercase; }
+  .titulo { @apply font-display text-[2.1rem] leading-[1.08] font-medium tracking-tight text-balance sm:text-4xl lg:text-5xl; }
+
+  /* Botões */
+  .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-semibold whitespace-nowrap transition duration-200 active:scale-[0.98]; }
+  .btn-terra { @apply bg-terra text-white hover:bg-terra-escuro; }
+  .btn-whats { @apply bg-whats text-mata-escuro hover:brightness-95; }
+  .btn-contorno { @apply ring-1 ring-mata/25 ring-inset text-mata hover:bg-mata/5; }
+  .btn-claro { @apply ring-1 ring-papel/50 ring-inset text-papel hover:bg-papel/10; }
+
+  /* Ícones SVG (sprite no início do <body>) */
+  .i { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .i-cheio { fill: currentColor; stroke: none; }
+
+  /* Galerias com scroll-snap */
+  .seta { @apply absolute top-1/2 hidden size-11 -translate-y-1/2 place-items-center rounded-full bg-papel/90 text-mata shadow-md transition hover:bg-papel lg:grid; }
+  .trilho { @apply relative flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none rounded-3xl bg-mata/10; }
+  .trilho > img { @apply h-full w-full shrink-0 snap-center object-cover; }
+  /* Pontinhos (criados pelo main.js) */
+  .ponto { padding: 6px; background: none; border: 0; cursor: pointer; }
+  .ponto span { display: block; height: 6px; width: 6px; border-radius: 999px; background: rgb(255 255 255 / 0.6); transition: width 0.25s ease, background 0.25s ease; }
+  .ponto[aria-current="true"] span { width: 20px; background: #fff; }
+
+  /* Listas de comodidades */
+  .item { @apply flex items-start gap-2.5; }
+  .item > svg { @apply mt-px size-5 text-terra; }
+
+  /* Formulário */
+  .campo-rotulo { @apply mb-1.5 block text-sm font-medium text-mata; }
+  .campo { @apply block min-h-12 w-full appearance-none rounded-xl border border-mata/20 bg-white px-4 py-3 text-base text-mata transition outline-none focus:border-terra focus:ring-4 focus:ring-terra/15 aria-[invalid=true]:border-terra aria-[invalid=true]:ring-4 aria-[invalid=true]:ring-terra/15; }
+  /* Pisca o formulário ao chegar por "Ver datas disponíveis" */
+  .destaque { animation: destaque 1.6s ease 0.6s; }
+
+  /* Políticas (acordeões) */
+  .politica { @apply rounded-2xl bg-white ring-1 ring-mata/10 transition open:ring-mata/20; }
+  .politica > summary { @apply flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-display text-xl [&::-webkit-details-marker]:hidden; }
+  .politica-corpo { @apply space-y-3 px-5 pb-6 text-[0.975rem]/relaxed text-musgo; }
+  .politica-corpo ul { @apply list-disc space-y-2.5 pl-5 marker:text-terra; }
+
+  /* Aparecer ao rolar (a classe .js é posta pelo script no <head>) */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .revelar { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .revelar.visivel { opacity: 1; transform: none; }
+  }
+}
+
+@keyframes destaque {
+  0%,
+  100% { box-shadow: 0 0 0 0 rgb(233 162 59 / 0); }
+  35% { box-shadow: 0 0 0 6px rgb(233 162 59 / 0.85); }
+}
