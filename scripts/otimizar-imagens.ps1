@@ -103,7 +103,7 @@ if (Test-Path $logoPath) {
       $b.Save((Join-Path $saida "logo-$s.png"), [System.Drawing.Imaging.ImageFormat]::Png)
       $b.Dispose()
     }
-    $papel = [System.Drawing.ColorTranslator]::FromHtml('#F6F1E7')
+    $papel = [System.Drawing.ColorTranslator]::FromHtml('#FBF6EE')
     $b = Redimensionar $quadrado 180 180 $papel
     $b.Save((Join-Path $saida 'apple-touch-icon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
     $b.Dispose()

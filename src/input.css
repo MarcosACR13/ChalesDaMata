@@ -16,17 +16,24 @@
 @source "../index.html";
 @source "../assets/js/main.js";
 
+/*
+  Paleta tirada da logo (logo.PNG):
+    #323A30 verde-carvão do anel · #4F603C verde da mata · #C5A66E dourado das árvores
+    #FFDEAF pêssego do céu · #91D8F7 azul da cachoeira
+  Os nomes dos tokens são os antigos (para não mexer nas classes do HTML):
+  "terra" e "mel" agora são o dourado da logo.
+*/
 @theme {
-  --color-mata: #2f3b2a;
-  --color-mata-escuro: #222b1e;
-  --color-musgo: #55644f;
-  --color-terra: #b5532e;
-  --color-terra-escuro: #97431f;
-  --color-mel: #e9a23b;
-  --color-mel-claro: #f6e7c8;
-  --color-cafe: #4a3a2e;
-  --color-papel: #f6f1e7;
-  --color-areia: #ece3d1;
+  --color-mata: #323a30;         /* anel da logo */
+  --color-mata-escuro: #262c25;  /* anel, um tom abaixo (degradê do topo) */
+  --color-musgo: #4f603c;        /* verde da mata */
+  --color-terra: #c5a66e;        /* dourado: botões e ícones */
+  --color-terra-escuro: #765c30; /* dourado escurecido, para texto legível em fundo claro */
+  --color-mel: #c5a66e;          /* dourado: destaques sobre o verde-carvão */
+  --color-mel-claro: #ffdeaf;    /* pêssego do céu */
+  --color-ceu: #91d8f7;          /* azul da cachoeira */
+  --color-papel: #fbf6ee;        /* fundo claro, com um toque do pêssego */
+  --color-areia: #f1e9da;        /* fundo alternado, com um toque do dourado */
   --color-whats: #25d366;
 
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -51,7 +58,7 @@
     @apply bg-papel font-sans text-mata antialiased;
   }
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-terra;
+    @apply outline-2 outline-offset-2 outline-terra-escuro;
   }
   ::selection {
     @apply bg-mel/40;
@@ -79,7 +86,8 @@
 
   /* Botões */
   .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-semibold whitespace-nowrap transition duration-200 active:scale-[0.98]; }
-  .btn-terra { @apply bg-terra text-white hover:bg-terra-escuro; }
+  /* Dourado com texto verde-carvão (texto branco no dourado fica ilegível) */
+  .btn-terra { @apply bg-terra text-mata-escuro hover:brightness-95; }
   .btn-whats { @apply bg-whats text-mata-escuro hover:brightness-95; }
   .btn-contorno { @apply ring-1 ring-mata/25 ring-inset text-mata hover:bg-mata/5; }
   .btn-claro { @apply ring-1 ring-papel/50 ring-inset text-papel hover:bg-papel/10; }
@@ -122,6 +130,6 @@
 
 @keyframes destaque {
   0%,
-  100% { box-shadow: 0 0 0 0 rgb(233 162 59 / 0); }
-  35% { box-shadow: 0 0 0 6px rgb(233 162 59 / 0.85); }
+  100% { box-shadow: 0 0 0 0 rgb(197 166 110 / 0); }
+  35% { box-shadow: 0 0 0 6px rgb(197 166 110 / 0.85); }
 }
