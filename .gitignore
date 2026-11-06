@@ -1,0 +1,5 @@
+# Dependências do build (recriadas com `npm install`)
+node_modules/
+
+# Lixo do macOS
+.DS_Store

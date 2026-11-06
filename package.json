@@ -1,0 +1,13 @@
+{
+  "name": "chale-camping-da-mata",
+  "private": true,
+  "description": "Site do Chalé e Camping da Mata (damatachales.com.br)",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o assets/css/site.css --minify",
+    "dev": "tailwindcss -i src/input.css -o assets/css/site.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.11",
+    "tailwindcss": "4.1.11"
+  }
+}
